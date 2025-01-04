@@ -21,6 +21,7 @@ requirements:
     - python {{ python_min }}
     - pip
     - flit-core >=3.4
+    - flake8
   run:
     - python >={{ python_min }}
     - flake8 >=5
