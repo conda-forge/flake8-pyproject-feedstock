@@ -14,16 +14,16 @@ build:
   entry_points:
     - "flake8p = flake8p:main"
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - flit-core >=3.4
     - flake8 >=5
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - flake8 >=5
     - tomli
 
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/john-hen/Flake8-pyproject
