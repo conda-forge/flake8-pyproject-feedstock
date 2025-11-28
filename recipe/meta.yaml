@@ -1,5 +1,5 @@
 {% set name = "flake8-pyproject" %}
-{% set version = "1.2.3" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/john-hen/Flake8-pyproject/archive/{{ version }}.tar.gz
-  sha256: 8f065721c53c1fe22d423d82db99eef6559b463a8701aa03b03668d43abfc851
+  sha256: 9075bdd9712b03a9dad78652425081bbee63c9ad759bf9efb3a0eb1cd1b180c3
 
 build:
   noarch: python
   entry_points:
     - "flake8p = flake8p:main"
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
